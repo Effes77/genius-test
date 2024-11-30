@@ -32,13 +32,16 @@
 :root {
     --color-primary-dark: #31261A;
     --color-primary-light: #FAF4EA;
-    --color-brand-light: #819B57;
+    --color-secondary-dark: #A18268;
+    --color-brand-normal: #819B57;
     --color-brand-dark: #465929;
-}
+    --color-brand-light: #CFCFBC;
+    }
 
 /* Base */
 body {
     color: var(--color-primary-dark);
+    background-color: var(--color-primary-light);
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
     font-weight: 400;
@@ -74,8 +77,8 @@ ul {
 /* button */
 .button {
     color: var(--color-primary-light);
-    background-color: var(--color-brand-light);
-    border: 2px solid var(--color-brand-light);
+    background-color: var(--color-brand-normal);
+    border: 2px solid var(--color-brand-normal);
     border-radius: 8px;
     cursor: pointer;
     padding: 16px 32px;
@@ -90,7 +93,7 @@ ul {
     text-decoration: none;
     }
 .link:hover {
-    color: var(--color-brand-light);
+    color: var(--color-brand-normal);
     font-weight: 600;
 }
 /* Header*/
@@ -114,6 +117,10 @@ ul {
 /* hero section */
 .hero-section {
     padding: 272px 0;
+    background-image: url(../images/hero-section-background.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
 }
 .hero-title {
     color: var(--color-primary-light);
@@ -122,7 +129,7 @@ ul {
     font-weight: 900;
 }
 .hero-title .accent {
-    color: var(--color-brand-light);
+    color: var(--color-brand-normal);
 }
 /* adventages section*/
 .adventages-list {
@@ -136,7 +143,7 @@ ul {
     color: var(--color-primary-light);
 }
 .adventages-section {
-    background-color: var(--color-brand-light);
+    background-color: var(--color-brand-normal);
     padding: 16px 0;
 }
 /* sections */
@@ -144,6 +151,9 @@ ul {
     font-size: 64px;
     font-weight: 900;
     line-height: 1.3;
+}
+.section-title.centered {
+    text-align: center;
 }
 .section-title .accent {
  color: var(--color-brand-dark);
@@ -164,11 +174,11 @@ ul {
     margin-bottom: 42px;
 }
 .traditions-text .uppercase {
-    color: var(--color-brand-light);
+    color: var(--color-brand-normal);
     text-transform: uppercase;
 }
 .traditions-text .brand {
-    color: var(--color-brand-light);
+    color: var(--color-brand-normal);
     font-weight: 600;
 }
 .traditions-text.limited {
@@ -183,16 +193,30 @@ ul {
 .chefs-section {
     margin-bottom: 80px;
 }
+.chefs-title {
+    max-width: 540px;
+    margin: 0 auto 80px;
+}
+.chefs-title::before,
+.chefs-title::after {
+    display: block;
+    width: 352px;
+    border: 2px solid var(--color-brand-light);
+    content: '';
+}
+.chef-photo {
+    border-radius: 4px 4px 4px 200px;
+    box-shadow: -16px 16px 0 0 var(--color-primary-light), -16px 16px 0 2px var(--color-secondary-dark);
+}
 /* fotmat section */
 .formats-list {
     display: flex;
     gap: 20px;
 }
-.formats-item {
-    
-}
 .format-card {
+    height: 444px;
     border: 1px solid black;
+    background-image: linear-gradient(180deg, rgba(49, 38, 26, 0) 55.21%, rgba(49, 38, 26, 0.71) 72.92%, #31261A 100%);
     border-radius: 16px;
     padding: 24px;
 }
@@ -219,8 +243,15 @@ ul {
     text-decoration: none;
 }
 .adress-link:hover {
-    color: var(--color-brand-light);
+    color: var(--color-brand-normal);
 }
 .adress-copyright {
     font-size: 14px;
+}
+footer {
+    background-image: url(../images/Footer-background.jpg);
+    background-color: var(--color-primary-dark);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
 }
