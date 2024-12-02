@@ -39,6 +39,12 @@
     }
 
 /* Base */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
     color: var(--color-primary-dark);
     background-color: var(--color-primary-light);
@@ -48,15 +54,25 @@ body {
     line-height: 1.5;
     margin: 0;
 }
+
 h1, h2, h3, h4, h5, h6, p {
     margin-top: 0;
 }
+
+a {
+    display: inline-block;
+}
+
 address {
     font-style: normal;
 }
+
 ul {
     list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
+
 .visually-hidden {
     position: absolute;
     left: -10000px;
@@ -65,16 +81,20 @@ ul {
     height: 1px;
     overflow: hidden;
 }
+
 .section {
     padding: 48px 0;
 }
+
 .container {
     width: 100%;
     max-width: 1288px;
     margin: 0 auto;
     padding: 0 24px;
 }
+
 /* button */
+
 .button {
     color: var(--color-primary-light);
     background-color: var(--color-brand-normal);
@@ -83,38 +103,48 @@ ul {
     cursor: pointer;
     padding: 16px 32px;
 }
+
 .button:hover {
     color: var(--color-brand-dark);
     background-color: transparent;
 }
+
 /* link */
+
 .link {
     color: var(--color-primary-light);
     text-decoration: none;
-    }
+}
+
 .link:hover {
     color: var(--color-brand-normal);
     font-weight: 600;
 }
+
 /* Header*/
+
 .header-container {
     display: flex;
     align-items: center;
     gap: 40px;
 }
+
 .header-nav {
     display: flex;
     align-items: center;
     flex-grow: 1;
     gap: 40px;
 }
+
 .header-menu {
     display: flex;
     gap: 64px;
     flex-grow: 1;
     justify-content: center;
 }
+
 /* hero section */
+
 .hero-section {
     padding: 272px 0;
     background-image: url(../images/hero-section-background.jpg);
@@ -122,81 +152,112 @@ ul {
     background-position: center top;
     background-size: cover;
 }
+
 .hero-title {
     color: var(--color-primary-light);
     text-align: center;
     font-size: 128px;
     font-weight: 900;
 }
+
 .hero-title .accent {
     color: var(--color-brand-normal);
 }
+
 /* adventages section*/
+
 .adventages-list {
     display: flex;
     justify-content: space-between;
     gap: 40px;
 }
+
 .adventages-item {
     font-size: 20px;
     font-weight: 300;
     color: var(--color-primary-light);
 }
+
 .adventages-section {
     background-color: var(--color-brand-normal);
     padding: 16px 0;
 }
+
 /* sections */
+
 .section-title{
     font-size: 64px;
     font-weight: 900;
     line-height: 1.3;
 }
+
 .section-title.centered {
     text-align: center;
 }
+
 .section-title .accent {
  color: var(--color-brand-dark);
 }
+
 /* Tradition section */
+
 .traditions-section {
     padding-top: 96px;
 }
+
 .traditions-container {
     display: flex;
     justify-content: space-between;
     gap: 40px;
 }
+
 .traditions-content {
     max-width: 710px;
 }
+
 .traditions-title {
     margin-bottom: 42px;
 }
+
 .traditions-text .uppercase {
     color: var(--color-brand-normal);
     text-transform: uppercase;
 }
+
 .traditions-text .brand {
     color: var(--color-brand-normal);
     font-weight: 600;
 }
+
 .traditions-text.limited {
     max-width: 335px;
 }
+
 /* chefs section */
+
 .chef-title {
     margin-bottom: 16px;
     font-size: 40px;
     font-weight: 600;
 }
+
+.chef-text p {
+    margin-bottom: 24px;
+}
+
+.chef-text p:last-child {
+    margin-bottom: 0;
+}
+
 .chefs-section {
     margin-bottom: 80px;
 }
+
 .chefs-title {
     max-width: 540px;
     margin: 0 auto 80px;
 }
+
 .chefs-title::before,
 .chefs-title::after {
     display: block;
@@ -204,34 +265,69 @@ ul {
     border: 2px solid var(--color-brand-light);
     content: '';
 }
+
+.chef-list {
+    display: flex;
+    gap: 40px 30px;
+    flex-wrap: wrap;
+}
+
+.chefs-item {
+    flex-basis: calc(100% - 30px / 2);
+}
+
+.chef-card {
+    display: flex;
+    gap: 30px;
+}
+
 .chef-photo {
     border-radius: 4px 4px 4px 200px;
     box-shadow: -16px 16px 0 0 var(--color-primary-light), -16px 16px 0 2px var(--color-secondary-dark);
 }
-/* fotmat section */
+
+/* format section */
+
+.formats-cotainer {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
 .formats-list {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
 }
+
+.formats-item {
+    flex-basis: calc((100% - 40px) /3 );
+}
+
 .format-card {
     height: 444px;
+    padding: 24px;
     border: 1px solid black;
     background-image: linear-gradient(180deg, rgba(49, 38, 26, 0) 55.21%, rgba(49, 38, 26, 0.71) 72.92%, #31261A 100%);
     border-radius: 16px;
-    padding: 24px;
 }
+
 .formats-title {
     margin-bottom: 80px;
 }
+
 .format-title {
     font-size: 24px;
     font-weight: 600;
 }
+
 .format-text {
     font-size: 14px;
     font-weight: 300;
 }
+
 /* carosel button */
+
 .carousel-button {
     display: flex;
     align-items: center;
@@ -241,37 +337,87 @@ ul {
     padding: 0;
     fill: var(--color-primary-dark);
     background-color: transparent;
+    flex-shrink: 0;
     border-radius: 50%;
     border: 1px solid var(--color-primary-dark);
     cursor: pointer;
 }
+
 .carousel-button:hover {
     background-color: var(--color-primary-dark);
     fill: var(--color-primary-light);
 }
+
 /* Contact section */
+
+.contact-section {
+    padding-bottom: 96px;
+}
+
+.contact-container {
+    display: flex;
+    gap: 32px;
+}
+
 .contact-title {
     margin-bottom: 16px;
 }
+
+.contact-map {
+    flex-shrink: 0;
+    border: none;
+    border-radius: 16px;
+}
+
 /* Footer */
+.footer {
+    padding: 32px 0;
+}
+
+.footer-container {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-nav,
+.footer-adress {
+    display: flex;
+    flex-basis: 50%;
+    gap: 20px;
+}
+
+.footer-logo, 
+.footer-menu {
+    flex-grow: 1;
+}
+
+.adress-list, .adress-info {
+    flex-grow: 1;
+}
+
 .adress-link {
     color: var(--color-primary-light);
     font-size: 16px;
     font-weight: 300;
     text-decoration: none;
 }
+
 .adress-link:hover {
     color: var(--color-brand-normal);
 }
+
 .adress-icon {
     fill: var(--color-primary-light);
 }
+
 .adress-icon:hover {
     fill: var(--color-secondary-dark);
 }
+
 .adress-copyright {
     font-size: 14px;
 }
+
 footer {
     background-image: url(../images/Footer-background.jpg);
     background-color: var(--color-primary-dark);
