@@ -235,6 +235,38 @@ ul {
 
 /* chefs section */
 
+.chefs-title {
+    position: relative;
+    margin: 0 auto 80px;
+}
+
+.chefs-title::before,
+.chefs-title::after {
+    position: absolute;
+    bottom: 24px;
+    width: 352px;
+    border: 2px solid var(--color-brand-light);
+    content: '';
+}
+
+.chefs-title::before {
+    left: 0; 
+}
+
+.chefs-title::after {
+    right: 0;
+}
+
+.chef-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 30px;
+}
+
+.chefs-item {
+    flex-basis: calc((100% - 30px ) / 2);
+}
+
 .chef-title {
     margin-bottom: 16px;
     font-size: 40px;
@@ -253,27 +285,8 @@ ul {
     margin-bottom: 80px;
 }
 
-.chefs-title {
-    max-width: 540px;
+.chefs-title { 
     margin: 0 auto 80px;
-}
-
-.chefs-title::before,
-.chefs-title::after {
-    display: block;
-    width: 352px;
-    border: 2px solid var(--color-brand-light);
-    content: '';
-}
-
-.chef-list {
-    display: flex;
-    gap: 40px 30px;
-    flex-wrap: wrap;
-}
-
-.chefs-item {
-    flex-basis: calc(100% - 30px / 2);
 }
 
 .chef-card {
@@ -370,8 +383,38 @@ ul {
 }
 
 /* Footer */
+
 .footer {
     padding: 32px 0;
+    position: relative;
+    background-image: url(../images/Footer-background.jpg);
+    background-color: var(--color-primary-dark);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+}
+
+.footer::before,
+.footer::after {
+    position: absolute;
+    bottom: 0;
+    background-repeat: no-repeat;
+}
+
+.footer::before {
+    width: 180px;
+    height: 120px;
+    left: 0;
+    background-image: url(../images/Decor-bread-small.png);
+    content: '';
+}
+
+.footer::after {
+    width: 380px;
+    height: 190px;
+    right: 0;
+    background-image: url(../images/Decor-bread-large.png);
+    content: '';
 }
 
 .footer-container {
@@ -417,11 +460,34 @@ ul {
 .adress-copyright {
     font-size: 14px;
 }
+/* Modal */
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+}
+.modal {
+    position: relative;
+    width: 880px;
+    height: 880px;
+    background-color: var(--color-primary-light);
+    border-radius: 32px;
+}
 
-footer {
-    background-image: url(../images/Footer-background.jpg);
-    background-color: var(--color-primary-dark);
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-size: cover;
+.backdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.modal-btn-close {
+    position: absolute;
+    top: 40px;
+    right: 40px;
 }
