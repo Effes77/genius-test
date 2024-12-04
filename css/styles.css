@@ -29,6 +29,7 @@
     font-weight: 900;
     src: url('../fonts/poppins-v21-latin-900.woff2') format('woff2');
 }
+
 :root {
     --color-primary-dark: #31261A;
     --color-primary-light: #FAF4EA;
@@ -94,7 +95,6 @@ ul {
 }
 
 /* button */
-
 .button {
     color: var(--color-primary-light);
     background-color: var(--color-brand-normal);
@@ -110,18 +110,24 @@ ul {
 }
 
 /* link */
-
 .link {
     color: var(--color-primary-light);
     text-decoration: none;
+    transition: color 0.3s;
 }
 
 .link:hover {
     color: var(--color-brand-normal);
-    font-weight: 600;
 }
 
 /* Header*/
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 32px;
+}
 
 .header-container {
     display: flex;
@@ -144,10 +150,9 @@ ul {
 }
 
 /* hero section */
-
 .hero-section {
     padding: 272px 0;
-    background-image: url(../images/hero-section-background.jpg);
+    background-image: linear-gradient(102.76deg, rgba(18, 18, 17, 0.78) 2.03%, rgba(18, 18, 17, 0.6) 58.46%, rgba(18, 18, 17, 0) 90.36%), url(../images/hero-section-background.jpg);
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
@@ -165,7 +170,6 @@ ul {
 }
 
 /* adventages section*/
-
 .adventages-list {
     display: flex;
     justify-content: space-between;
@@ -184,7 +188,6 @@ ul {
 }
 
 /* sections */
-
 .section-title{
     font-size: 64px;
     font-weight: 900;
@@ -200,7 +203,6 @@ ul {
 }
 
 /* Tradition section */
-
 .traditions-section {
     padding-top: 96px;
 }
@@ -234,7 +236,6 @@ ul {
 }
 
 /* chefs section */
-
 .chefs-title {
     position: relative;
     margin: 0 auto 80px;
@@ -300,7 +301,6 @@ ul {
 }
 
 /* format section */
-
 .formats-cotainer {
     display: flex;
     gap: 32px;
@@ -325,6 +325,11 @@ ul {
     border-radius: 16px;
 }
 
+.format-card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+
 .formats-title {
     margin-bottom: 80px;
 }
@@ -340,7 +345,6 @@ ul {
 }
 
 /* carosel button */
-
 .carousel-button {
     display: flex;
     align-items: center;
@@ -361,8 +365,11 @@ ul {
     fill: var(--color-primary-light);
 }
 
-/* Contact section */
+.carousel-button.next {
+    transform: rotate(180deg);
+}
 
+/* Contact section */
 .contact-section {
     padding-bottom: 96px;
 }
@@ -383,7 +390,6 @@ ul {
 }
 
 /* Footer */
-
 .footer {
     padding: 32px 0;
     position: relative;
@@ -460,6 +466,7 @@ ul {
 .adress-copyright {
     font-size: 14px;
 }
+
 /* Modal */
 .backdrop {
     position: fixed;
@@ -470,12 +477,16 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 20px 0;
     background: rgba(0, 0, 0, 0.5);
+    transition: opacity 0.3s visibility 0.3s;
 }
 .modal {
     position: relative;
-    width: 880px;
-    height: 880px;
+    width: 100%;
+    max-width: 880px;
+    height: 100%;
+    max-height: 880px;
     background-color: var(--color-primary-light);
     border-radius: 32px;
 }
