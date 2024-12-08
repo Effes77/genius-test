@@ -1,17 +1,17 @@
 .formats-section {
+  &__container {
     display: flex;
-    gap: 32px;
     align-items: center;
+    gap: 32px;
+  }
+    
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
 
     &__item {
-        flex-basis: calc((100% - 40px) /3);
-    }
-    &__list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-    &__title {
-        margin-bottom: 80px;
-    }
+    flex-basis: calc((100% - 40px) /3);
+    }     
 }
