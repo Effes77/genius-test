@@ -29,8 +29,13 @@
               </li>
             </ul>
           </nav>
-          <button type="button" class="button modal-btn-open">
+          <button type="button" class="header__button button modal-btn-open">
             Замовити дзвінок
+          </button>
+          <button class="header__burger" type="button">
+            <svg class="icon-menu" width="24" height="24">
+              <use href="./images/icons.svg#icon-menu"></use>
+            </svg>
           </button>
         </div>
       </div>
@@ -347,9 +352,8 @@
         </div>
       </div>
     </footer>
-    <div class="backdrop is-hiden">
-      <!--  is-hidden -->
-      <div class="modal is-hidden">
+    <div class="backdrop__is hidden">
+      <div class="modal">
         <button class="modal__btn-close" type="button">Close</button>
         <h2>Замовити дзвінок</h2>
         <p>Залишіть заявку та наш спеціаліст зв'яжеться з Вами!</p>
